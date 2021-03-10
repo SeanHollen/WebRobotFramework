@@ -23,5 +23,5 @@ Valid Login
     Next Button
     Account Options
     Logout
-    Login Page Should Be Open
+    Title Should Be    Google Accounts
 

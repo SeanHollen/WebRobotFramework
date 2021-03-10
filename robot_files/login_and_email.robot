@@ -8,9 +8,9 @@ Resource          resources.robot
 
 *** Variables ***
 ${RECIPIENT}   Test12321XXYY@gmail.com
-${SUBJECT}   Contradulations
+${SUBJECT}   Congratulations
 ${CONTENTS}   We are pleased to inform you...
-${PATHTOEMAIL}    xpath://*[@id=":2d"]/tbody/tr[1]
+${PATHTOEMAIL}    xpath://*[contains(@class, 'zA')][1]/td[5]
 
 *** Test Cases ***
 Valid Login
@@ -28,6 +28,8 @@ Write Email
     Click Element    ${SENDBUTTON}
 
 Open Email
+    Wait Until Element is Visible    ${PATHTOEMAIL}
+    Scroll Element Into View    ${PATHTOEMAIL}
     Click Element     ${PATHTOEMAIL}
 
 *** Keywords ***
