@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.3 on darwin)" generated="20210310 08:37:04.332" rpa="false">
+<suite id="s1" name="Login And Email" source="/Users/sean.hollen/Desktop/code/WebRobotFramework/robot_files/login_and_email.robot">
+<kw name="Open Browser To Login Page" library="resources" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210310 08:37:05.270" level="INFO">Opening browser 'firefox' to base url 'https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&amp;service=mail&amp;sacu=1&amp;rip=1&amp;flowName=GlifWebSignIn&amp;flowEntry=ServiceLogin'.</msg>
+<msg timestamp="20210310 08:37:05.275" level="INFO">Firefox driver log is always forced to to: /Users/sean.hollen/Desktop/code/WebRobotFramework/geckodriver-28.log</msg>
+<status status="PASS" starttime="20210310 08:37:05.269" endtime="20210310 08:37:13.667"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210310 08:37:13.668" endtime="20210310 08:37:14.193"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20210310 08:37:14.193" endtime="20210310 08:37:14.194"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resources">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Gmail</arg>
+</arguments>
+<msg timestamp="20210310 08:37:14.407" level="INFO">Page title is 'Gmail'.</msg>
+<status status="PASS" starttime="20210310 08:37:14.195" endtime="20210310 08:37:14.407"></status>
+</kw>
+<status status="PASS" starttime="20210310 08:37:14.194" endtime="20210310 08:37:14.407"></status>
+</kw>
+<status status="PASS" starttime="20210310 08:37:05.269" endtime="20210310 08:37:14.408"></status>
+</kw>
+<test id="s1-t1" name="Valid Login">
+<kw name="Login Page Should Be Open" library="resources">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Gmail</arg>
+</arguments>
+<msg timestamp="20210310 08:37:14.617" level="INFO">Page title is 'Gmail'.</msg>
+<status status="PASS" starttime="20210310 08:37:14.410" endtime="20210310 08:37:14.617"></status>
+</kw>
+<status status="PASS" starttime="20210310 08:37:14.410" endtime="20210310 08:37:14.618"></status>
+</kw>
+<kw name="Input Username" library="resources">
+<arguments>
+<arg>${VALID USER}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:identifier</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20210310 08:37:14.619" level="INFO">Typing text 'Test12321XXYY' into text field 'name:identifier'.</msg>
+<status status="PASS" starttime="20210310 08:37:14.619" endtime="20210310 08:37:15.513"></status>
+</kw>
+<status status="PASS" starttime="20210310 08:37:14.618" endtime="20210310 08:37:15.513"></status>
+</kw>
+<kw name="Next Button" library="resources">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>class:nCP5yc</arg>
+</arguments>
+<msg timestamp="20210310 08:37:15.515" level="INFO">Clicking button 'class:nCP5yc'.</msg>
+<status status="PASS" starttime="20210310 08:37:15.514" endtime="20210310 08:37:16.866"></status>
+</kw>
+<status status="PASS" starttime="20210310 08:37:15.514" endtime="20210310 08:37:16.867"></status>
+</kw>
+<kw name="Input Password" library="resources">
+<arguments>
+<arg>${VALID PASSWORD}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>name:password</arg>
+</arguments>
+<status status="PASS" starttime="20210310 08:37:16.869" endtime="20210310 08:37:17.104"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20210310 08:37:17.105" level="INFO">Typing text 'Test12321#XXYY#' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20210310 08:37:17.104" endtime="20210310 08:37:18.154"></status>
+</kw>
+<status status="PASS" starttime="20210310 08:37:16.867" endtime="20210310 08:37:18.154"></status>
+</kw>
+<kw name="Next Button" library="resources">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>class:nCP5yc</arg>
+</arguments>
+<msg timestamp="20210310 08:37:18.156" level="INFO">Clicking button 'class:nCP5yc'.</msg>
+<status status="PASS" starttime="20210310 08:37:18.155" endtime="20210310 08:37:22.081"></status>
+</kw>
+<status status="PASS" starttime="20210310 08:37:18.154" endtime="20210310 08:37:22.082"></status>
+</kw>
+<status status="PASS" starttime="20210310 08:37:14.408" endtime="20210310 08:37:22.083" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Write Email">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${COMPOSEBUTTON}</arg>
+</arguments>
+<status status="PASS" starttime="20210310 08:37:22.087" endtime="20210310 08:37:25.501"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${COMPOSEBUTTON}</arg>
+</arguments>
+<msg timestamp="20210310 08:37:25.502" level="INFO">Clicking element 'xpath://*[@class="oo"]/div/div/div/div'.</msg>
+<status status="PASS" starttime="20210310 08:37:25.502" endtime="20210310 08:37:26.705"></status>
+</kw>
+<kw name="Fill Out Email">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class:vO</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210310 08:37:32.789" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210310 08:37:32.136" endtime="20210310 08:37:32.789"></status>
+</kw>
+<msg timestamp="20210310 08:37:32.799" level="FAIL">Element 'class:vO' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20210310 08:37:26.706" endtime="20210310 08:37:32.799"></status>
+</kw>
+<status status="FAIL" starttime="20210310 08:37:26.705" endtime="20210310 08:37:32.800"></status>
+</kw>
+<status status="FAIL" starttime="20210310 08:37:22.086" endtime="20210310 08:37:32.800" critical="yes">Element 'class:vO' not visible after 5 seconds.</status>
+</test>
+<test id="s1-t3" name="Open Email">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${PATHTOEMAIL}</arg>
+</arguments>
+<msg timestamp="20210310 08:37:32.803" level="INFO">Clicking element 'xpath://*[@id=":2d"]/tbody/tr[1]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210310 08:37:33.798" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-23.png"&gt;&lt;img src="selenium-screenshot-23.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210310 08:37:33.159" endtime="20210310 08:37:33.798"></status>
+</kw>
+<msg timestamp="20210310 08:37:33.804" level="FAIL">Element with locator 'xpath://*[@id=":2d"]/tbody/tr[1]' not found.</msg>
+<status status="FAIL" starttime="20210310 08:37:32.802" endtime="20210310 08:37:33.804"></status>
+</kw>
+<status status="FAIL" starttime="20210310 08:37:32.801" endtime="20210310 08:37:33.805" critical="yes">Element with locator 'xpath://*[@id=":2d"]/tbody/tr[1]' not found.</status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210310 08:37:33.807" endtime="20210310 08:37:39.448"></status>
+</kw>
+<doc>Logs in, composes an email, sends it, clicks on email
+
+Uses keywords in resources file</doc>
+<status status="FAIL" starttime="20210310 08:37:04.340" endtime="20210310 08:37:39.448"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="2">Critical Tests</stat>
+<stat pass="1" fail="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="2" id="s1" name="Login And Email">Login And Email</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
