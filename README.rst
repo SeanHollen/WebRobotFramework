@@ -3,7 +3,7 @@ pip install -r requirements.txt
 robot login_and_email.robot
 
 
-robot login_tests
+robot robot_files
 
 or
 
